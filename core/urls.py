@@ -18,7 +18,7 @@ from django.urls import path, include
 
 from rest_framework.routers import DefaultRouter
 
-from books.views import BookViewSet, update_book
+from books.views import BookViewSet
 
 
 router = DefaultRouter(False)
@@ -26,6 +26,5 @@ router.register('books', BookViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('ub', update_book),
     path('admin/', admin.site.urls),
 ]
