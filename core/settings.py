@@ -47,6 +47,7 @@ INSTALLED_APPS = [
 
     'rest_framework',
     'django_extensions',
+    'django_filters',
 
     'books',
 ]
