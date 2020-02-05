@@ -143,7 +143,9 @@ MEDIA_URL = '/media/'
 
 MEDIA_ROOT = root('media')
 
-CORS_ORIGIN_ALLOW_ALL = True
+CORS_ORIGIN_WHITELIST = [
+    'http://localhost:4200',
+]
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
