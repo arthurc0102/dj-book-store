@@ -24,10 +24,12 @@ from drf_yasg.views import get_schema_view
 from drf_yasg import openapi
 
 from books.views import BookViewSet
+from orders.views import OrderViewSet
 
 
 router = DefaultRouter(False)
 router.register('books', BookViewSet)
+router.register('orders', OrderViewSet)
 
 schema_view = get_schema_view(
    openapi.Info(
