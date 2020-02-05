@@ -17,6 +17,7 @@ from django.contrib import admin
 from django.urls import path, include
 
 from rest_framework.routers import DefaultRouter
+from rest_framework.authtoken.views import obtain_auth_token
 
 from books.views import BookViewSet
 
@@ -26,5 +27,6 @@ router.register('books', BookViewSet)
 
 urlpatterns = [
     path('', include(router.urls)),
+    path('login', obtain_auth_token, name='login'),
     path('admin/', admin.site.urls),
 ]
