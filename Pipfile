@@ -16,6 +16,7 @@ django-cors-headers = "*"
 django-extensions = "*"
 django-filter = "*"
 drf-yasg = "*"
+djangorestframework-camel-case = "*"
 
 [requires]
 python_version = "3.8"
