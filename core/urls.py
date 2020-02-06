@@ -43,7 +43,7 @@ schema_view = get_schema_view(
 
 urlpatterns = [
     path('', include(router.urls)),
-    path('login', obtain_auth_token),
+    path('login', obtain_auth_token, name='login'),
     path('admin/', admin.site.urls),
     path('docs/', schema_view.with_ui('swagger', cache_timeout=0)),
 ]
